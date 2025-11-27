@@ -7,11 +7,17 @@ const Hero: React.FC = () => {
 
   return (
     <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-[75%_center] md:bg-center transition-all duration-700 ease-in-out"
-        style={{ backgroundImage: `url(${bgImage})` }}
-      >
+      {/* Background Image using <img> for better LCP performance */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={bgImage} 
+          alt="Consultório Dra. Vitória Germano"
+          className="w-full h-full object-cover object-[75%_center] md:object-center transition-all duration-700 ease-in-out"
+          // @ts-ignore - fetchpriority is a valid attribute but not yet in all React types
+          fetchpriority="high"
+          loading="eager"
+        />
+        {/* Overlays */}
         <div className="absolute inset-0 bg-[#5D2816]/80 mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#5D2816] via-transparent to-transparent opacity-90"></div>
       </div>

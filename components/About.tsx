@@ -15,6 +15,9 @@ const About: React.FC = () => {
                   src="https://i.postimg.cc/rpJBRMqW/Gemini-Generated-Image-fm02sbfm02sbfm02.png" 
                   alt="Dra. Vitória Germano" 
                   className="w-full h-auto object-cover"
+                  loading="lazy"
+                  width="384"
+                  height="500"
                 />
                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-8">
                   <p className="text-white font-serif text-xl italic">"Se encabule não, pode chegar!"</p>

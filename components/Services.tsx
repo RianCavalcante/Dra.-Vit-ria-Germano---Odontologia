@@ -35,6 +35,7 @@ const Services: React.FC = () => {
                       src={service.iconUrl} 
                       alt={service.title} 
                       className="w-8 h-8 object-contain"
+                      loading="lazy"
                     />
                   ) : (
                     <Icon size={28} strokeWidth={1.5} />
