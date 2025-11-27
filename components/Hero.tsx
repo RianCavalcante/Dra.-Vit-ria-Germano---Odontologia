@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
     <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center transition-all duration-700 ease-in-out"
+        className="absolute inset-0 z-0 bg-cover bg-[75%_center] md:bg-center transition-all duration-700 ease-in-out"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
         <div className="absolute inset-0 bg-[#5D2816]/80 mix-blend-multiply"></div>
